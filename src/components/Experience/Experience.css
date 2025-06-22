@@ -1,0 +1,43 @@
+.experience-container {
+  padding-top: 50px;
+}
+
+.experience-title {
+  font-size: 2.8em;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.experience-item {
+  background-color: #f7f7f7;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+.experience-item h3 {
+  color: #8e62f0;
+  margin-bottom: 5px;
+}
+
+.experience-item p {
+  font-style: italic;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.experience-item ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #555;
+}
+
+/* Responsive Experience Section */
+@media (max-width: 768px) {
+  .experience-title {
+    font-size: 2.2em;
+  }
+}

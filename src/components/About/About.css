@@ -1,0 +1,120 @@
+.about-container {
+  padding-top: 50px;
+}
+
+.about-title {
+  font-size: 2.8em;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-description {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 700px;
+  padding-left: 20px; /* Mimic the purple bar */
+  border-left: 5px solid #8e62f0; /* Purple bar */
+}
+
+.about-sections {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.my-stack-section, .my-special-place-section {
+  flex: 1;
+  min-width: 300px; /* Minimum width for sections */
+}
+
+.my-stack-section h3, .my-special-place-section h3 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.stack-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  background-color: #f0f0f0;
+  color: #555;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  border: 1px solid #ddd;
+}
+
+.badge:hover {
+  background-color: #e5e5e5;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease;
+}
+
+.globe-placeholder {
+  background-color: #e0e0e0; /* Grey background */
+  border-radius: 10px;
+  min-height: 250px; /* Ensure it has height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+  font-style: italic;
+  font-size: 0.9em;
+  position: relative;
+  overflow: hidden; /* For rounded corners */
+}
+
+/* Responsive About Section */
+@media (max-width: 768px) {
+  .about-container {
+    padding-top: 30px;
+  }
+  .about-title {
+    font-size: 2.2em;
+    text-align: center;
+  }
+  .about-description {
+    font-size: 1em;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    text-align: left; /* Keep left alignment for description */
+  }
+  .about-sections {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .my-stack-section, .my-special-place-section {
+    min-width: unset; /* Remove min-width */
+    width: 100%; /* Take full width */
+  }
+  .my-stack-section h3, .my-special-place-section h3 {
+    text-align: center;
+  }
+  .stack-badges {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.8em;
+  }
+  .about-description {
+    font-size: 0.9em;
+  }
+  .badge {
+    padding: 6px 12px;
+    font-size: 0.8em;
+  }
+  .globe-placeholder {
+    min-height: 200px;
+  }
+}

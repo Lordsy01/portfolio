@@ -1,0 +1,46 @@
+.projects-container {
+  padding-top: 50px;
+}
+
+.projects-title {
+  font-size: 2.8em;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.project-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #f7f7f7;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.project-card h3 {
+  color: #8e62f0;
+  margin-bottom: 10px;
+}
+
+
+.conundrum:hover {
+  background-color: #8e62f0;
+}
+
+/* Responsive Projects Section */
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 2.2em;
+  }
+  .project-card-grid {
+    grid-template-columns: 1fr;
+  }
+}

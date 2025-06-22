@@ -1,0 +1,270 @@
+/* HOME SECTION */
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding-top: 50px;
+  min-height: 400px;
+}
+
+.home-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.greeting {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.home-title {
+  font-size: 3.8em;
+  font-weight: 800;
+  color: #8e62f0;
+  margin: 0 0 20px 0;
+  line-height: 1.1;
+}
+
+.home-description {
+  font-size: 1.1em;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.home-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background-color: #333;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #555;
+}
+
+/* PROFILE IMAGE */
+.home-image-container {
+  flex: 0.7;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+}
+
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Outer circle behind image */
+.home-image-container::before {
+  content: '';
+  position: absolute;
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  z-index: 0;
+}
+
+/* CONTACT POPUP */
+.contact-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: popupFade 0.3s ease-in-out;
+}
+
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #444;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.contact-form h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  margin: 8px 0;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  resize: none;
+}
+
+.contact-form button {
+  margin-top: 10px;
+  padding: 12px;
+  background-color: #5e17eb;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #4510b4;
+}
+
+/* SOCIAL ICONS */
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-links a {
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+/* TABLET RESPONSIVE */
+@media (max-width: 992px) {
+  .home-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .home-image-container {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .home-buttons {
+    justify-content: center;
+  }
+
+  .home-title {
+    font-size: 3em;
+  }
+
+  .profile-image {
+    width: 220px;
+    height: 220px;
+  }
+
+  .home-image-container::before {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 2.5em;
+  }
+
+  .home-description {
+    font-size: 1em;
+  }
+
+  .home-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .contact-popup {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .contact-form h3 {
+    font-size: 1.2rem;
+  }
+
+  .social-links img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .home-image-container::before {
+    width: 200px;
+    height: 200px;
+  }
+}
